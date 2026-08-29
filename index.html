@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#9b79b9">
+  <title>Moonberry Cottage ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="scene">
+    <div class="sky"></div>
+    <div class="stars" aria-hidden="true"></div>
+    <div class="fireflies" aria-hidden="true"></div>
+    <div class="petals" aria-hidden="true"></div>
+
+    <section class="cottage-window">
+      <header class="titlebar">
+        <div class="window-dots"><span></span><span></span><span></span></div>
+        <div class="title">☾ moonberry cottage ♡</div>
+        <div class="top-actions">
+          <button id="themeBtn" class="icon-btn" title="Change theme">✦</button>
+          <button id="nightBtn" class="icon-btn" title="Night mode">☾</button>
+        </div>
+      </header>
+
+      <div class="decor-row">🌸　🍄　🦋　🌿　🌸</div>
+
+      <section class="player-card">
+        <div class="weather-row">
+          <span>☾ <span id="moodText">midnight meadow</span></span>
+          <span id="magicText">fairy lights are glowing ♡</span>
+        </div>
+
+        <div class="album-stage">
+          <div class="fairy-ring ring-one"></div>
+          <div class="fairy-ring ring-two"></div>
+          <div class="album">
+            <div class="moon">☾</div>
+            <div class="tiny-stars">✦ · ✧ · ⋆</div>
+            <div class="hill hill-back"></div>
+            <div class="hill hill-front"></div>
+            <div class="cottage">
+              <div class="chimney"></div>
+              <div class="roof"></div>
+              <div class="house">
+                <span class="window left"></span>
+                <span class="door"></span>
+                <span class="window right"></span>
+              </div>
+            </div>
+            <div class="flower flower-a">✿</div>
+            <div class="flower flower-b">❀</div>
+            <div class="flower flower-c">✿</div>
+          </div>
+          <span class="butterfly butterfly-a">🦋</span>
+          <span class="butterfly butterfly-b">🦋</span>
+        </div>
+
+        <div id="visualizer" class="visualizer" aria-hidden="true"></div>
+
+        <div class="song-title" id="songTitle">welcome to your tiny fairy cottage ♡</div>
+        <div class="song-subtitle" id="songSubtitle">choose a song and let the moonlight play</div>
+
+        <div class="progress-wrap">
+          <span id="currentTime">0:00</span>
+          <input id="progress" type="range" min="0" max="100" value="0">
+          <span id="duration">0:00</span>
+        </div>
+
+        <div class="controls">
+          <button id="shuffleBtn" class="round-btn" title="Shuffle">⤨</button>
+          <button id="prevBtn" class="round-btn" title="Previous">◀</button>
+          <button id="playBtn" class="play-btn" title="Play">▶</button>
+          <button id="nextBtn" class="round-btn" title="Next">▶</button>
+          <button id="repeatBtn" class="round-btn" title="Repeat">↻</button>
+        </div>
+
+        <div class="volume-row">
+          <span>♡</span>
+          <input id="volume" type="range" min="0" max="1" step="0.01" value="0.72">
+          <span>🔊</span>
+        </div>
+
+        <div class="extra-controls">
+          <button id="favBtn" class="soft-btn">♡ favorite</button>
+          <button id="sleepBtn" class="soft-btn">🌙 sleep timer</button>
+          <button id="clearBtn" class="soft-btn">🧺 clear</button>
+        </div>
+
+        <label class="choose-btn">
+          <span>✧</span>
+          <span>choose songs from my little attic</span>
+          <input id="fileInput" type="file" accept="audio/*" multiple>
+        </label>
+
+        <div class="tiny-note">your music stays on this device ♡</div>
+
+        <div class="playlist-tools">
+          <input id="searchInput" type="search" placeholder="🔎 search your enchanted songs...">
+          <select id="sortSelect" aria-label="Sort playlist">
+            <option value="added">Recently added</option>
+            <option value="az">A → Z</option>
+            <option value="favorites">♡ Favorites</option>
+          </select>
+        </div>
+
+        <section class="playlist-box">
+          <div class="playlist-head">
+            <strong>♡ enchanted playlist</strong>
+            <span id="songCount">0 songs</span>
+          </div>
+          <div id="playlist" class="playlist">
+            <div class="empty">✦ your playlist is waiting for a little magic ✦</div>
+          </div>
+        </section>
+
+        <div class="tip" id="tip">Tip: double-tap a song to play it ✨</div>
+      </section>
+
+      <footer class="footer">☁　✦　🌷　♡　🍄　✧　☾</footer>
+    </section>
+
+    <p class="install-hint">♡ Later, host these files and choose “Add to Home screen” to install your PWA.</p>
+  </main>
+
+  <audio id="audio" preload="metadata"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
